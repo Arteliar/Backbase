@@ -1,0 +1,25 @@
+<suite name="Parameter test Suite" verbose="1">
+    <parameter name="username" value="candidatex" />
+    <parameter name="password" value="qa-is-cool" />
+    <parameter name="email" value="test@test.pl" />
+    <parameter name="emailPassword" value="test" />
+
+    <parameter name="title" value="New Article for Test Only" />
+    <parameter name="summary" value="Short Article" />
+    <parameter name="body" value="Short body of this test article" />
+    <parameter name="tags" value="test" />
+
+    <test name="CRUD Article Test Suite">
+        <parameter name="bodyEdit" value="A bit longer body but still short only for test" />
+        <classes>
+            <class name="tests.TestCaseNG">
+                <methods>
+                    <include name="createNewArticle" />
+                    <include name="readExistingArticle" />
+                    <include name="updateExistingArticle" />
+                    <include name="deleteExistingArticle" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
